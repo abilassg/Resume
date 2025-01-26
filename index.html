@@ -67,8 +67,23 @@
     }
   </script>
 
-  <!-- Timeline Styling -->
+  <!-- Dark Mode Toggle -->
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+      const toggleButton = document.getElementById('dark-mode-toggle');
+      if (body.classList.contains('dark-mode')) {
+        toggleButton.textContent = 'Light Mode';
+      } else {
+        toggleButton.textContent = 'Dark Mode';
+      }
+    }
+  </script>
+
+  <!-- Timeline and Dark Mode Styling -->
   <style>
+    /* Timeline Styling */
     .timeline {
       position: relative;
       max-width: 800px;
@@ -124,6 +139,26 @@
       border-radius: 6px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
+
+    /* Dark Mode Styling */
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .dark-mode .timeline-content {
+      background-color: #1e1e1e;
+      color: #ffffff;
+    }
+
+    .dark-mode .timeline::after {
+      background-color: #ffffff;
+    }
+
+    .dark-mode .timeline-item::after {
+      background-color: #121212;
+      border-color: #ffffff;
+    }
   </style>
 </head>
 
@@ -140,6 +175,7 @@
         <a class="nav-link scrollto" href="#Technical-Skills">Technical Skills</a>
         <a class="nav-link scrollto" href="#Projects">Projects</a>
         <a class="nav-link scrollto" href="#Hobbies">Hobbies</a>
+        <button id="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
       </div>
     </div>
   </div>
@@ -229,9 +265,73 @@
       </div>
     </section>
 
-    <!-- Other Sections (Achievements, Technical Skills, etc.) -->
-    <!-- Add your existing sections here -->
+    <!-- Scholastic Achievements -->
+    <section id="Achievements" class="Achievements" style="background-color:#B0E0E6">
+      <div class="primary_container">
+        <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
+          <h1 style="font-weight:700;">Scholastic Achievements</h1>
+          <ul>
+            <li><strong>Academic Excellence Award</strong>, IIT Kanpur (2020).</li>
+            <li><strong>GATE 2018</strong>: AIR 529 (Top 0.5% percentile).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
+    <!-- Relevant Courses -->
+    <section id="Courses" class="Courses" style="background-color:#E0FFFF">
+      <div class="primary_container">
+        <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
+          <h1 style="font-weight:700;">Relevant Courses</h1>
+          <ul>
+            <li>Stability of Structures</li>
+            <li>Experimental Methods in Structural Engineering</li>
+            <li>Structural Dynamics</li>
+            <li>Reinforced Concrete Design</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Relevant Academic Projects -->
+    <section id="Projects" class="Projects" style="background-color:#B0E0E6">
+      <div class="primary_container">
+        <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
+          <h1 style="font-weight:700;">Relevant Academic Projects</h1>
+          <ul>
+            <li><strong>On Use of Peak Factors in Response Spectrum-Based Modal Combination Rules for Seismic Response</strong> (M.Tech Thesis, Dec 2022).</li>
+            <li><strong>Designing of Lateral Force Resisting System using Steel Special Moment Resisting Frame (SMRF)</strong> (Project, April 2019).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="Technical-Skills" class="Technical-Skills" style="background-color:#E0FFFF">
+      <div class="primary_container">
+        <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
+          <h1 style="font-weight:700;">Technical Skills</h1>
+          <ul>
+            <li><strong>Engineering Software:</strong> MATLAB, AutoCAD, ETABS, SAP 2000, Staad-Pro, Primavera.</li>
+            <li><strong>Programming:</strong> Python, MATLAB, HTML/CSS.</li>
+            <li><strong>Tools:</strong> MS Office, LaTeX.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="Hobbies" class="Hobbies" style="background-color:#B0E0E6">
+      <div class="primary_container">
+        <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
+          <h1 style="font-weight:700;">Hobbies & Interests</h1>
+          <ul>
+            <li>Web development (personal projects: <a href="https://github.com/yourprofile" target="_blank">GitHub</a>).</li>
+            <li>Human psychology and behavioral analysis.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
