@@ -24,6 +24,107 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Abhilash Ghumadwar",
+      "jobTitle": "Structural Engineer",
+      "url": "https://abilassg.github.io/Resume/",
+      "sameAs": [
+        "https://linkedin.com/in/abhilash-ghumadwar-249a0a9b",
+        "https://github.com/yourprofile"
+      ],
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "HILTI",
+          "startDate": "2025-01"
+        },
+        {
+          "@type": "Organization",
+          "name": "Mumbai Railway Vikas Corporation Ltd.",
+          "startDate": "2020-09",
+          "endDate": "2024-12"
+        }
+      ],
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Indian Institute of Technology, Kanpur",
+          "startDate": "2018",
+          "endDate": "2020"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Government College of Engineering, Amravati",
+          "startDate": "2014",
+          "endDate": "2018"
+        }
+      ]
+    }
+  </script>
+
+  <!-- Timeline Styling -->
+  <style>
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #0078d7;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -12px;
+      background-color: #fff;
+      border: 4px solid #0078d7;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .right {
+      left: 50%;
+    }
+
+    .right::after {
+      left: -12px;
+    }
+
+    .timeline-content {
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 
 <body class="full_width_container">
@@ -74,136 +175,63 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Experience & Education Section -->
     <section id="Experience" class="Experience" style="background-color:#E0FFFF">
       <div class="primary_container">
         <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
-          <h1 style="font-weight:700;">Experience</h1>
-          <div style="flex: 100%;">
-            <h3><u>HILTI, Pune (Starting Jan 2025 – Ongoing)</u></h3>
-            <h5>Technical Engineer-1</h5>
-            <ul>
-              <li>Design modular support systems using HILTI’s proprietary software, optimizing structural efficiency and compliance with safety standards.</li>
-              <li>Collaborate with cross-functional teams to deliver solutions for large-scale infrastructure projects.</li>
-            </ul>
+          <h1 style="font-weight:700;">Experience & Education</h1>
+          <div class="timeline">
+            <!-- HILTI -->
+            <div class="timeline-item left">
+              <div class="timeline-content">
+                <h3>HILTI, Pune (Starting Jan 2025 – Ongoing)</h3>
+                <p>Technical Engineer-1</p>
+                <ul>
+                  <li>Design modular support systems using HILTI’s proprietary software.</li>
+                </ul>
+              </div>
+            </div>
 
-            <h3><u>Mumbai Railway Vikas Corporation Ltd., Mumbai (Sept 2020 – Dec 2024)</u></h3>
-            <h5>Senior Project Engineer (Dec 2022 – Dec 2024) | Project Engineer (Sept 2020 – Dec 2022)</h5>
-            <ul>
-              <li>Led design and execution of <strong>15+ station improvement projects</strong>, including foot over bridges (FOBs), platform sheds, and underground water tanks.</li>
-              <li>Spearheaded proof-checking approvals for design drawings with IIT Bombay, <strong>reducing review time by 30%</strong>.</li>
-              <li>Managed site planning and execution for the Neral Station upgrade (Central Railway), ensuring on-time delivery of critical structures.</li>
-              <li>Evaluated <strong>20+ consultancy proposals</strong>, improving design quality and cost efficiency by 25%.</li>
-            </ul>
-          </div>
-          <hr>
-          <div style="flex: 100%;">
-            <h3><u>Indian Institute of Technology, Kanpur (2018–2020)</u></h3>
-            <h4>Teaching Assistant</h4>
-            <ul>
-              <li>Assisted in courses: <strong>Stability of Structures</strong>, <strong>Experimental Methods in Structural Engineering</strong>, <strong>Structural Dynamics</strong>, and <strong>Reinforced Concrete Design</strong>.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+            <!-- Mumbai Railway Vikas Corporation -->
+            <div class="timeline-item right">
+              <div class="timeline-content">
+                <h3>Mumbai Railway Vikas Corporation Ltd., Mumbai (Sept 2020 – Dec 2024)</h3>
+                <p>Senior Project Engineer</p>
+                <ul>
+                  <li>Led design and execution of 15+ station improvement projects.</li>
+                </ul>
+              </div>
+            </div>
 
-    <!-- Education Section -->
-    <section id="Education" class="Education" style="background-color:#B0E0E6">
-      <div class="primary_container" style="margin-bottom: 0px; margin-top: 0px;">
-        <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
-          <h1 style="font-weight:700;">Education</h1>
-          <table class="table-bordered">
-            <tr>
-              <td><b>Degree</b></td>
-              <td><b>Institution</b></td>
-            </tr>
-            <tr>
-              <td>M.Tech. - Structural Engineering</td>
-              <td>Indian Institute of Technology, Kanpur</td>
-            </tr>
-            <tr>
-              <td>B.Tech. - Civil Engineering</td>
-              <td>Government College of Engineering, Amravati</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </section>
+            <!-- IIT Kanpur -->
+            <div class="timeline-item left">
+              <div class="timeline-content">
+                <h3>Indian Institute of Technology, Kanpur (2018–2020)</h3>
+                <p>M.Tech - Structural Engineering</p>
+                <ul>
+                  <li>Specialized in seismic analysis and structural dynamics.</li>
+                </ul>
+              </div>
+            </div>
 
-    <!-- Achievements Section -->
-    <section id="Achievements" class="Achievements" style="background-color:#E0FFFF">
-      <div class="primary_container">
-        <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
-          <h1 style="font-weight:700;">Achievements</h1>
-          <div style="flex: 100%;">
-            <ul>
-              <li><strong>Academic Excellence Award</strong>, IIT Kanpur (2020).</li>
-              <li><strong>GATE 2018</strong>: AIR 529 (Top 0.5% percentile).</li>
-            </ul>
+            <!-- Government College of Engineering, Amravati -->
+            <div class="timeline-item right">
+              <div class="timeline-content">
+                <h3>Government College of Engineering, Amravati (2014–2018)</h3>
+                <p>B.Tech - Civil Engineering</p>
+                <ul>
+                  <li>Focused on structural design and construction management.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Technical Skills Section -->
-    <section id="Technical-Skills" class="Technical-Skills" style="background-color:#B0E0E6">
-      <div class="primary_container" style="margin-bottom: 0px; margin-top: 0px;">
-        <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
-          <h1 style="font-weight:700;">Technical Skills</h1>
-          <ul>
-            <li><strong>Structural Design:</strong> ETABS, SAP 2000, STAAD.Pro, AutoCAD.</li>
-            <li><strong>Project Management:</strong> Primavera, MS Project.</li>
-            <li><strong>Programming:</strong> Python, MATLAB, HTML/CSS.</li>
-            <li><strong>Tools:</strong> LaTeX, MS Office.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <!-- Other Sections (Achievements, Technical Skills, etc.) -->
+    <!-- Add your existing sections here -->
 
-    <!-- Projects Section -->
-    <section id="Projects" class="Projects" style="background-color:#E0FFFF">
-      <div class="primary_container">
-        <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
-          <h1 style="font-weight:700;">Academic Projects</h1>
-          <div style="flex: 100%;">
-            <h3><u>Indian Institute of Technology, Kanpur (2018–2020)</u></h3>
-            <b>On Use of Peak Factors in Response Spectrum-Based Modal Combination Rules for Seismic Response (M.Tech Thesis, Dec 2022)</b>
-            <br>
-            <b>Thesis Supervisor: Prof. Vinay Kumar Gupta</b>
-            <ul>
-              <li>Generated wavelet-based time histories for a desired target spectrum.</li>
-              <li>Modeled non-stationarity peak factors using regression analysis to determine peak floor response during earthquakes.</li>
-            </ul>
-          </div>
-          <hr>
-          <div style="flex: 100%;">
-            <b>Designing of Lateral Force Resisting System using Steel Special Moment Resisting Frame (SMRF) (Project, April 2019)</b>
-            <br>
-            <b>Course: Earthquake Analysis and Design of Structures (CE 629)</b>
-            <br>
-            <b>Instructor: Dr. Chinmoy Kolay</b>
-            <ul>
-              <li>Modeled a five-story office building using European and Indian standards.</li>
-              <li>Analyzed the structure using SAP 2000 and designed it using IS: 800-2007, IS: 1893 (Part 1)-2016, and FEMA 350-2000.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Hobbies Section -->
-    <section id="Hobbies" class="Hobbies" style="background-color:#B0E0E6">
-      <div class="primary_container" style="margin-bottom: 0px; margin-top: 0px;">
-        <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
-          <h1 style="font-weight:700;">Hobbies & Interests</h1>
-          <ul>
-            <li>Web development (personal projects: <a href="https://github.com/yourprofile" target="_blank">GitHub</a>).</li>
-            <li>Human psychology and behavioral analysis.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- Footer -->
