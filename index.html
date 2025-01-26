@@ -1,83 +1,265 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="og:url" content="https://abilassg.github.io/Resume/">
   <title>Abhilash Ghumadwar | Structural Engineer</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Structural Engineer with 4+ years of experience in railway infrastructure design and modular systems. Master’s from IIT Kanpur. Currently working on designing modular support systems at HILTI.">
+  <meta name="author" content="Abhilash Ghumadwar">
+  <meta name="keywords" content="Abhilash Ghumadwar, Structural Engineer, Railway Infrastructure, Modular Systems, HILTI, IIT Kanpur, Resume, CV" />
+  <link rel="icon" type="image/png" href="assets/svg/download.png" sizes="32x32 64x64">
+  <meta http-equiv="Content-Language" content="en">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicond41d.ico?" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Abhilash Ghumadwar",
+      "jobTitle": "Structural Engineer",
+      "url": "https://abilassg.github.io/Resume/",
+      "sameAs": [
+        "https://linkedin.com/in/abhilash-ghumadwar-249a0a9b",
+        "https://github.com/yourprofile"
+      ],
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "HILTI",
+          "startDate": "2025-01"
+        },
+        {
+          "@type": "Organization",
+          "name": "Mumbai Railway Vikas Corporation Ltd.",
+          "startDate": "2020-09",
+          "endDate": "2024-12"
+        }
+      ],
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Indian Institute of Technology, Kanpur",
+          "startDate": "2018",
+          "endDate": "2020"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Government College of Engineering, Amravati",
+          "startDate": "2014",
+          "endDate": "2018"
+        }
+      ]
+    }
+  </script>
+
+  <!-- Dark Mode Toggle -->
   <script>
     function toggleDarkMode() {
-      const html = document.documentElement;
-      const currentTheme = html.getAttribute("data-theme");
-      const newTheme = currentTheme === "light" ? "dark" : "light";
-      html.setAttribute("data-theme", newTheme);
-      localStorage.setItem("theme", newTheme);
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+      const toggleButton = document.getElementById('dark-mode-toggle');
+      if (body.classList.contains('dark-mode')) {
+        toggleButton.textContent = 'Light Mode';
+      } else {
+        toggleButton.textContent = 'Dark Mode';
+      }
+    }
+  </script>
+
+  <!-- Timeline and Dark Mode Styling -->
+  <style>
+    /* Timeline Styling */
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px 0;
     }
 
-    // Load saved theme from localStorage
-    const savedTheme = localStorage.getItem("theme") || "light";
-    document.documentElement.setAttribute("data-theme", savedTheme);
-  </script>
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #0078d7;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -12px;
+      background-color: #fff;
+      border: 4px solid #0078d7;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .right {
+      left: 50%;
+    }
+
+    .right::after {
+      left: -12px;
+    }
+
+    .timeline-content {
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Dark Mode Styling */
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .dark-mode .timeline-content {
+      background-color: #1e1e1e;
+      color: #ffffff;
+    }
+
+    .dark-mode .timeline::after {
+      background-color: #ffffff;
+    }
+
+    .dark-mode .timeline-item::after {
+      background-color: #121212;
+      border-color: #ffffff;
+    }
+  </style>
 </head>
-<body>
+
+<body class="full_width_container">
   <!-- Navbar -->
   <div class="navbar-container">
-    <button id="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <div class="primary_container">
+      <a class="link home-icon" href="index.html"></a>
+      <div class="navbar align_menu" style="font-family: Montserrat; font-weight:500">
+        <a class="nav-link scrollto" href="#Home">Home</a>
+        <a class="nav-link scrollto" href="#Experience">Experience</a>
+        <a class="nav-link scrollto" href="#Education">Education</a>
+        <a class="nav-link scrollto" href="#Achievements">Achievements</a>
+        <a class="nav-link scrollto" href="#Technical-Skills">Technical Skills</a>
+        <a class="nav-link scrollto" href="#Projects">Projects</a>
+        <a class="nav-link scrollto" href="#Hobbies">Hobbies</a>
+        <button id="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+      </div>
+    </div>
   </div>
 
   <!-- Main Content -->
-  <main>
+  <main aria-label="Content">
     <!-- Home Section -->
-    <section id="Home">
-      <h1>Hi👋, I am Abhilash Ghumadwar</h1>
-      <h4>Structural Engineer | Railway Infrastructure & Modular Systems</h4>
+    <section id="Home" class="Home" style="background-color:#B0E0E6">
+      <div class="flexbox_container_two_col flexbox_container_flip primary_container" style="padding-top: 20px;padding-bottom: 20px;">
+        <div class="flexbox_item">
+          <div>
+            <h1 style="font-size:28px; font-family: Montserrat; font-weight: bold; line-height: 1.2;">Hi👋, I am Abhilash Ghumadwar</h1>
+            <h4>Structural Engineer | Railway Infrastructure & Modular Systems</h4>
+          </div>
+          <a class="ml-onclick-form button button-hello" href="assets/svg/Abhilash Resume.pdf">Download Resume</a>
+          <div style="flex: 20%;">
+            <a href="https://in.linkedin.com/in/abhilash-ghumadwar-249a0a9b" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-linkedin-square fa-5x" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:abilas124@gmail.com">
+              <i class="fa fa-envelope-square fa-5x"></i>
+            </a>
+            <a href="https://maps.app.goo.gl/GMnyA9vKnYcWE1B29">
+              <i class="fa fa-location-arrow fa-5x"></i>
+            </a>
+          </div>
+        </div>
+        <div class="flexbox_item">
+          <div style="vertical-align: middle; float: right;">
+            <img src="assets/svg/Abhilash_Ghumadwar.jpg" width="230" alt="Abhilash Ghumadwar">
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Experience & Education Section -->
-    <section id="Experience">
-      <h1>Experience & Education</h1>
-      <div class="timeline">
-        <!-- HILTI -->
-        <div class="timeline-item left">
-          <div class="timeline-content">
-            <h3>HILTI, Pune (Starting Jan 2025 – Ongoing)</h3>
-            <p>Technical Engineer-1</p>
-            <ul>
-              <li>Design modular support systems using HILTI’s proprietary software.</li>
-            </ul>
-          </div>
-        </div>
+    <section id="Experience" class="Experience" style="background-color:#E0FFFF">
+      <div class="primary_container">
+        <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
+          <h1 style="font-weight:700;">Experience & Education</h1>
+          <div class="timeline">
+            <!-- HILTI -->
+            <div class="timeline-item left">
+              <div class="timeline-content">
+                <h3>HILTI, Pune (Starting Jan 2025 – Ongoing)</h3>
+                <p>Technical Engineer-1</p>
+                <ul>
+                  <li>Design modular support systems using HILTI’s proprietary software.</li>
+                </ul>
+              </div>
+            </div>
 
-        <!-- Mumbai Railway Vikas Corporation -->
-        <div class="timeline-item right">
-          <div class="timeline-content">
-            <h3>Mumbai Railway Vikas Corporation Ltd., Mumbai (Sept 2020 – Dec 2024)</h3>
-            <p>Senior Project Engineer</p>
-            <ul>
-              <li>Led design and execution of 15+ station improvement projects.</li>
-            </ul>
-          </div>
-        </div>
+            <!-- Mumbai Railway Vikas Corporation -->
+            <div class="timeline-item right">
+              <div class="timeline-content">
+                <h3>Mumbai Railway Vikas Corporation Ltd., Mumbai (Sept 2020 – Dec 2024)</h3>
+                <p>Senior Project Engineer</p>
+                <ul>
+                  <li>Led design and execution of 15+ station improvement projects.</li>
+                </ul>
+              </div>
+            </div>
 
-        <!-- IIT Kanpur -->
-        <div class="timeline-item left">
-          <div class="timeline-content">
-            <h3>Indian Institute of Technology, Kanpur (2018–2020)</h3>
-            <p>M.Tech - Structural Engineering</p>
-            <ul>
-              <li>Specialized in seismic analysis and structural dynamics.</li>
-            </ul>
-          </div>
-        </div>
+            <!-- IIT Kanpur -->
+            <div class="timeline-item left">
+              <div class="timeline-content">
+                <h3>Indian Institute of Technology, Kanpur (2018–2020)</h3>
+                <p>M.Tech - Structural Engineering</p>
+                <ul>
+                  <li>Specialized in seismic analysis and structural dynamics.</li>
+                </ul>
+              </div>
+            </div>
 
-        <!-- Government College of Engineering, Amravati -->
-        <div class="timeline-item right">
-          <div class="timeline-content">
-            <h3>Government College of Engineering, Amravati (2014–2018)</h3>
-            <p>B.Tech - Civil Engineering</p>
-            <ul>
-              <li>Focused on structural design and construction management.</li>
-            </ul>
+            <!-- Government College of Engineering, Amravati -->
+            <div class="timeline-item right">
+              <div class="timeline-content">
+                <h3>Government College of Engineering, Amravati (2014–2018)</h3>
+                <p>B.Tech - Civil Engineering</p>
+                <ul>
+                  <li>Focused on structural design and construction management.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
