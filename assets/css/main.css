@@ -4,51 +4,27 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
 /* Dark Mode Variables */
 html,
 html[data-theme="dark"] {
-  --text-color: #ffffff;
-  --background-color: #202a38;
-  --color-1: #314055;
-  --color-2: #161b22;
-  --brand-color: #f9ae58;
-  --shadow-color: rgba(255, 255, 255, 0.2);
-  --invert-intensity: invert(1);
+  --text-color: #ffffff; /* White text in dark mode */
+  --background-color: #202a38; /* Dark background */
+  --color-1: #314055; /* Darker shade for sections */
+  --color-2: #161b22; /* Even darker shade for sections */
+  --brand-color: #f9ae58; /* Accent color */
+  --light-bg-1: #1e2a3a; /* Dark mode alternative for #B0E0E6 */
+  --light-bg-2: #1a2636; /* Dark mode alternative for #E0FFFF */
 }
 
 html[data-theme="light"] {
-  --text-color: #303030;
-  --background-color: #ffffff;
-  --color-1: #e5f1ee;
-  --color-2: #a4cec3;
-  --brand-color: #81acbb;
-  --shadow-color: rgba(249, 174, 88, 0.2);
-  --invert-intensity: invert(0);
-}
-
-@media (prefers-color-scheme: dark) {
-  html,
-  html[data-theme="dark"] {
-    --text-color: #ffffff;
-    --background-color: #202a38;
-    --color-1: #314055;
-    --color-2: #161b22;
-    --brand-color: #f9ae58;
-    --shadow-color: rgba(255, 255, 255, 0.2);
-    --invert-intensity: invert(1);
-  }
-
-  html[data-theme="light"] {
-    --text-color: #303030;
-    --background-color: #ffffff;
-    --color-1: #e5f1ee;
-    --color-2: #a4cec3;
-    --brand-color: #81acbb;
-    --shadow-color: rgba(249, 174, 88, 0.2);
-    --invert-intensity: invert(0);
-  }
+  --text-color: #000000; /* Black text in light mode */
+  --background-color: #ffffff; /* Light background */
+  --color-1: #e5f1ee; /* Light shade for sections */
+  --color-2: #a4cec3; /* Lighter shade for sections */
+  --brand-color: #81acbb; /* Accent color */
+  --light-bg-1: #B0E0E6; /* Light blue for sections */
+  --light-bg-2: #E0FFFF; /* Light cyan for sections */
 }
 
 /* General Styles */
@@ -90,6 +66,19 @@ a:hover {
 #dark-mode-toggle:hover {
   background-color: var(--brand-color);
   color: var(--background-color);
+}
+
+/* Sections */
+section {
+  padding: 40px 0;
+}
+
+section:nth-child(odd) {
+  background-color: var(--light-bg-1); /* #B0E0E6 in light mode, dark alternative in dark mode */
+}
+
+section:nth-child(even) {
+  background-color: var(--light-bg-2); /* #E0FFFF in light mode, dark alternative in dark mode */
 }
 
 /* Timeline Styling */
@@ -148,48 +137,6 @@ a:hover {
   border-radius: 6px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   color: var(--text-color);
-}
-
-/* Sections */
-section {
-  padding: 40px 0;
-}
-
-section:nth-child(odd) {
-  background-color: var(--color-1);
-}
-
-section:nth-child(even) {
-  background-color: var(--color-2);
-}
-
-/* Technical Skills */
-#Technical-Skills ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#Technical-Skills ul li {
-  margin-bottom: 10px;
-}
-
-/* Hobbies Section */
-#Hobbies ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#Hobbies ul li {
-  margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-  background-color: var(--color-2);
-  color: var(--text-color);
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
 }
 
 /* Responsive Design */
