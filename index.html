@@ -327,21 +327,23 @@
   <script src="assets/js/mode_switcher.js" type="text/javascript"></script>
   <script src="assets/js/code_block.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      autoplay: {
-        delay: 5000, // 5000 ms = 5 seconds
-        disableOnInteraction: false, // optional: keeps autoplay running after user swipe
-      },
-    });
-  </script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    speed: 600, // 👈 slow down transition (default is 300)
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 5000, // 5 seconds between slides
+      disableOnInteraction: false,
+    },
+  });
+</script>
+
 </body>
 
 </html>
