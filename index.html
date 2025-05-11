@@ -24,6 +24,18 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <style>
+  .swiper {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  </style>
 </head>
 
 <body class="full_width_container">
@@ -80,8 +92,48 @@
       </div>
     </section>
 
+    
+
+    <!-- Swiper Section -->
+    <section id="Swiper" class="Swiper" style="background-color:#E0FFFF">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide" style="padding-bottom: 40px;">
+          <a href="#">
+            <div style="text-align: center; padding-top:30px;">
+              <object data="https://picsum.photos/300/200?random=1" width="300"></object>
+              <div style="font-weight: 500; margin-bottom: 20px;">Slide 1</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="swiper-slide" style="padding-bottom: 40px;">
+          <a href="#">
+            <div style="text-align: center; padding-top:30px;">
+              <object data="https://picsum.photos/300/200?random=1" width="300"></object>
+              <div style="font-weight: 500; margin-bottom: 20px;">Slide 2</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="swiper-slide" style="padding-bottom: 40px;">
+          <a href="#">
+            <div style="text-align: center; padding-top:30px;">
+              <object data="https://picsum.photos/300/200?random=1" width="300"></object>
+              <div style="font-weight: 500; margin-bottom: 20px;">Slide 3</div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+      <!-- Optional navigation dots -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
     <!-- Experience Section -->
-    <section id="Experience" class="Experience" style="background-color:#E0FFFF">
+    <section id="Experience" class="Experience" style="background-color:#B0E0E6">
       <div class="primary_container">
         <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
           <h1 style="font-weight:700;">Experience</h1>
@@ -121,7 +173,7 @@
     </section>
 
     <!-- Education Section -->
-    <section id="Education" class="Education" style="background-color:#B0E0E6">
+    <section id="Education" class="Education" style="background-color:#E0FFFF">
       <div class="primary_container" style="margin-bottom: 0px; margin-top: 0px;">
         <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
           <h1 style="font-weight:700;">Education</h1>
@@ -144,7 +196,7 @@
     </section>
 
     <!-- Achievements Section -->
-    <section id="Achievements" class="Achievements" style="background-color:#E0FFFF">
+    <section id="Achievements" class="Achievements" style="background-color:#B0E0E6">
       <div class="primary_container">
         <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
           <h1 style="font-weight:700;">Achievements</h1>
@@ -159,7 +211,7 @@
     </section>
 
         <!-- Publications Section -->
-    <section id="Publications" class="Publications" style="background-color:#B0E0E6"> 
+    <section id="Publications" class="Publications" style="background-color:#E0FFFF"> 
       <div class="primary_container">
         <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
           <h1 style="font-weight:700;">Publications</h1>
@@ -175,7 +227,7 @@
 
 
     <!-- Technical Skills Section -->
-    <section id="Technical-Skills" class="Technical-Skills" style="background-color:#E0FFFF">
+    <section id="Technical-Skills" class="Technical-Skills" style="background-color:#B0E0E6">
       <div class="primary_container" style="margin-bottom: 0px; margin-top: 0px;">
         <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
           <h1 style="font-weight:700;">Technical Skills</h1>
@@ -189,7 +241,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="Projects" class="Projects" style="background-color:#B0E0E6"> 
+    <section id="Projects" class="Projects" style="background-color:#E0FFFF"> 
       <div class="primary_container">
         <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
           <h1 style="font-weight:700;">Academic Projects</h1>
@@ -219,7 +271,7 @@
     </section>
 
     <!-- Hobbies Section -->
-    <section id="Interests" class="Interests" style="background-color:#E0FFFF">
+    <section id="Interests" class="Interests" style="background-color:#B0E0E6">
       <div class="primary_container" style="margin-bottom: 0px; margin-top: 0px;">
         <div class="flexbox_item" style="padding-top: 20px; padding-bottom:20px; padding-right: 0px; align-items: stretch;">
           <h1 style="font-weight:700;">Interests</h1>
@@ -240,6 +292,22 @@
   <!-- Scripts -->
   <script src="assets/js/mode_switcher.js" type="text/javascript"></script>
   <script src="assets/js/code_block.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000, // 5000 ms = 5 seconds
+        disableOnInteraction: false, // optional: keeps autoplay running after user swipe
+      },
+    });
+  </script>
 </body>
 
 </html>
