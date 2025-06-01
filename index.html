@@ -51,6 +51,16 @@
     margin: 0;
     white-space: nowrap;
 }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 
   </style>
 </head>
@@ -88,16 +98,19 @@
           </div>
           <div style="flex: 20%;">
             <a href="https://in.linkedin.com/in/abhilash-ghumadwar" target="_blank" rel="noopener noreferrer">
-              <i class="fa fa-linkedin-square fa-5x" aria-hidden="true"></i>
+              <i class="fa fa-linkedin-square fa-5x" aria-hidden="true"></i>              
+              <span class="sr-only">Linked in of Abhilash Ghumadwar</span>
             </a>
             <a href="mailto:abilas124@gmail.com">
               <i class="fa fa-envelope-square fa-5x"></i>
+              <span class="sr-only">Email ID of Abhilash Ghumadwar</span>
             </a>
             <!-- Home address -->
             <!--    <a href="https://maps.app.goo.gl/GMnyA9vKnYcWE1B29"> -->
             <!--  Office Address --> 
             <a href=https://maps.app.goo.gl/oa7hLJz12D1n8mrU6>
               <i class="fa fa-location-arrow fa-5x"></i>
+              <span class="sr-only">Location of Abhilash Ghumadwar</span>
             </a>
           </div>
         </div>
